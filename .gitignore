@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.fic
+*.png
+*.jpg
+*.jpeg
+!sample_data/*.png
+.venv/
+env/
+dist/
+build/
+*.egg-info/
+.DS_Store
+Thumbs.db
