@@ -1,6 +1,6 @@
 """
 Preprocessing and Image Partitioning Module.
-Role: Mahasiswa 1 (Preprocessing dan Pembagian Blok Citra).
+Role: Aji Kusuma Putra (Preprocessing & Partitioning).
 Handles grayscale conversion, dimension alignment, range block non-overlapping partitioning,
 and domain block sliding extraction with spatial downsampling.
 """

@@ -1,6 +1,6 @@
 """
 Fractal Decoding and Iterative Reconstruction Engine.
-Role: Mahasiswa 3 (Fractal Decoding dan Rekonstruksi).
+Role: Rayhan Haldi Hermawan (Fractal Decoding & Segmentation/Enhancement).
 Implements the Iterated Function System (IFS) iterative attractor convergence
 grounded in Banach's Fixed-Point Theorem.
 """

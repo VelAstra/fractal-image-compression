@@ -64,7 +64,7 @@ Agar penelitian dan pengembangan aplikasi tetap terfokus dan dapat diselesaikan 
 **Manfaat Proyek:**
 * **Bagi Akademik:** Memberikan studi kasus nyata implementasi Teorema Titik Tetap Banach dan aljabar fraktal dalam rekayasa perangkat lunak pengolahan citra digital.
 * **Bagi Praktisi & Pengembang:** Menyediakan repositori kode sumber terbuka yang modular, terdokumentasi rapi, dan memiliki kinerja komputasi cepat untuk eksplorasi kompresi citra alternatif.
-* **Bagi Mahasiswa Pengembang:** Melatih kolaborasi tim 4 mahasiswa dalam pembagian peran rekayasa perangkat lunak mulai dari algoritma inti, optimasi numerik, persistensi biner, hingga desain antarmuka pengguna.
+* **Bagi Mahasiswa Pengembang:** Melatih kolaborasi tim 2 mahasiswa dalam pembagian peran rekayasa perangkat lunak mulai dari algoritma inti, optimasi numerik, persistensi biner, hingga desain antarmuka pengguna.
 
 ---
 
@@ -238,15 +238,13 @@ Total ukuran berkas terkompresi untuk citra $256 \times 256$ dengan blok range $
 $$\text{Ukuran} = 15 + (1.024 \times 8) = 8.207 \text{ bita} \approx 8,01 \text{ KB}$$
 Dibandingkan dengan ukuran mentah $256 \times 256 = 65.536$ bita (64 KB), dicapai rasio kompresi teoretis dan riil yang tepat sebesar **7,99x**.
 
-### 3.4 Pembagian Tugas Tim Capstone (4 Mahasiswa)
+### 3.4 Pembagian Tugas Tim Capstone (2 Mahasiswa)
 Proyek ini mengimplementasikan pembagian kerja terstruktur sebagai berikut:
 
 | No | Anggota Tim | Peran & Tanggung Jawab Utama | Modul Kode Sumber |
 |:---|:---|:---|:---|
-| 1 | **Mahasiswa 1** | *Preprocessing* & Partisi Spasial Citra | `fic/preprocessing.py` |
-| 2 | **Mahasiswa 2** | *Domain-Range Matching* & Mesin *Encoding* Fraktal | `fic/encoder.py`, `fic/transforms.py` |
-| 3 | **Mahasiswa 3** | Mesin *Decoding* Rekonstruksi Iteratif IFS | `fic/decoder.py` |
-| 4 | **Mahasiswa 4** | Format Biner, GUI, Integrasi Sistem, & Evaluasi Metrik | `fic/binary_format.py`, `fic/evaluation.py`, `gui/app.py`, `cli.py` |
+| 1 | **Aji Kusuma Putra**<br/>NIM: 22/503701/PA/21657 | Preprocessing citra, konversi grayscale, partisi range dan sliding domain blocks, pembangkitan 8 isometri dihedral D4, matriks kovariansi BLAS, dan least-squares matcher. | `fic/preprocessing.py`, `fic/encoder.py`, `fic/transforms.py` |
+| 2 | **Rayhan Haldi Hermawan**<br/>NIM: 24/545406/PA/23176 | Mesin decoding IFS teriterasi, inisialisasi kanvas, verifikasi konvergensi attractor, perancangan format biner .fic, evaluasi metrik (CR, PSNR, SSIM), GUI Tkinter, dan integrasi CLI. | `fic/decoder.py`, `fic/binary_format.py`, `fic/evaluation.py`, `gui/app.py`, `cli.py` |
 
 ---
 

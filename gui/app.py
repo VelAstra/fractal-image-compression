@@ -1,6 +1,6 @@
 """
 Interactive Graphical User Interface (GUI) for Fractal Image Compression.
-Role: Mahasiswa 4 (Antarmuka Pengguna, Integrasi, Visualisasi, dan Evaluasi).
+Role: Rayhan Haldi Hermawan (GUI, Evaluation, & Integration).
 Built with Python Tkinter and Pillow.
 """
 

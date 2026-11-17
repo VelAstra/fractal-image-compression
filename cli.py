@@ -1,6 +1,6 @@
 """
 Command-Line Interface (CLI) for Fractal Image Compression Suite.
-Role: Mahasiswa 4 (Integrasi dan Evaluasi Sistem).
+Role: Rayhan Haldi Hermawan (GUI, Evaluation, & Integration).
 Supports encoding, decoding, ablation benchmarking, and launching the GUI.
 """
 

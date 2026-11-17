@@ -1,6 +1,6 @@
 """
 Evaluation Metrics and Ablation Study Module.
-Role: Mahasiswa 4 (Integrasi, Visualisasi, dan Evaluasi Kualitas Kompresi).
+Role: Rayhan Haldi Hermawan (GUI, Evaluation, & Integration).
 Implements exact mathematical formulations for PSNR, SSIM, Compression Ratio,
 and systematic benchmark sweeps.
 """

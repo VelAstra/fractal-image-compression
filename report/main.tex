@@ -42,7 +42,7 @@ Program Studi S1 Ilmu Komputer $\cdot$ Universitas Gadjah Mada\\[0.2em]
 \begin{abstract}
 Digital image transmission and archival storage require data compression techniques that balance storage footprint with reconstruction quality. While discrete cosine transform (DCT) and discrete wavelet transform (DWT) methods form the bedrock of JPEG and JPEG 2000 standards, \textbf{Fractal Image Compression (FIC)} establishes an alternative paradigm grounded in self-similarity and deterministic dynamical systems. FIC models an image not as a collection of transform coefficients, but as the unique fixed-point attractor of a Partitioned Iterated Function System (PIFS), theoretically guaranteed by the \textbf{Banach Fixed-Point Theorem}. 
 
-Historically, practical adoption of fractal compression was severely constrained by quadratic computational complexity during the domain-range matching phase. In this capstone project, we develop an industrial-grade, fully working Python and Tkinter application that achieves near-instantaneous encoding through vectorized BLAS matrix cross-covariance projections, reducing per-block search overhead by over 98\%. We establish a bespoke, compact binary container format (\texttt{.fic}) with 8-byte fixed transform records, achieving a verified \textbf{7.99$\times$ Compression Ratio (87.48\% space saving)} on standard test benchmarks with high structural fidelity ($\text{PSNR} = 19.23$\,dB, $\text{SSIM} = 0.8115$, $\text{Encoding Time} = 0.282$\,s). We document the mathematical foundation, system architecture, four-student team allocation, ablation studies, and real-time interactive visualization of attractor convergence across iterative reconstructions.
+Historically, practical adoption of fractal compression was severely constrained by quadratic computational complexity during the domain-range matching phase. In this capstone project, we develop an industrial-grade, fully working Python and Tkinter application that achieves near-instantaneous encoding through vectorized BLAS matrix cross-covariance projections, reducing per-block search overhead by over 98\%. We establish a bespoke, compact binary container format (\texttt{.fic}) with 8-byte fixed transform records, achieving a verified \textbf{7.99$\times$ Compression Ratio (87.48\% space saving)} on standard test benchmarks with high structural fidelity ($\text{PSNR} = 19.23$\,dB, $\text{SSIM} = 0.8115$, $\text{Encoding Time} = 0.282$\,s). We document the mathematical foundation, system architecture, two-student team allocation, ablation studies, and real-time interactive visualization of attractor convergence across iterative reconstructions.
 \end{abstract}
 
 \vspace{0.8em}
@@ -143,10 +143,8 @@ The application follows a clean, four-tier modular architecture aligning with th
 \toprule
 \textbf{No} & \textbf{Team Member} & \textbf{Core Module} & \textbf{Engineering Deliverable} \\
 \midrule
-1 & Mahasiswa 1 & Preprocessing & Grayscale normalization, grid dimension alignment, non-overlapping range tiling, and sliding domain extraction with $2\times 2$ spatial subsampling. \\
-2 & Mahasiswa 2 & Fractal Encoder & Dihedral isometry expansion ($D_4$), vectorized matrix cross-covariance evaluation, and closed-form affine least-squares optimization. \\
-3 & Mahasiswa 3 & Fractal Decoder & Multi-pass Iterated Function System (IFS) reconstruction, attractor convergence tracking, and initial canvas selection. \\
-4 & Mahasiswa 4 & Integration \& GUI & Binary file container format (\texttt{.fic}), Tkinter graphical interface, CLI tools, PSNR/SSIM evaluation, and ablation benchmarking. \\
+1 & Aji Kusuma Putra & Preprocessing & Encoding & Preprocessing citra, konversi grayscale, partisi range dan sliding domain blocks, pembangkitan 8 isometri dihedral D4, matriks kovariansi BLAS, dan least-squares matcher. (`fic/preprocessing.py`, `fic/encoder.py`, `fic/transforms.py`). \
+2 & Rayhan Haldi Hermawan & Decoding & Integration & Mesin decoding IFS teriterasi, inisialisasi kanvas, verifikasi konvergensi attractor, perancangan format biner .fic, evaluasi metrik (CR, PSNR, SSIM), GUI Tkinter, dan integrasi CLI. (`fic/decoder.py`, `fic/binary_format.py`, `fic/evaluation.py`, `gui/app.py`, `cli.py`). \
 \bottomrule
 \end{tabularx}
 \end{table}

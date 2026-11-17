@@ -1,6 +1,6 @@
 """
 Fractal Encoding Engine with Vectorized Domain-Range Matching.
-Role: Mahasiswa 2 (Domain-Range Matching dan Fractal Encoding).
+Role: Aji Kusuma Putra (Fractal Features & Encoding).
 Computes optimal affine contraction transformations (contrast s and brightness offset o)
 over the 8 dihedral isometries of candidate domain blocks using least-squares optimization.
 """

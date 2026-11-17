@@ -28,15 +28,15 @@ Repositori ini memuat implementasi lengkap dari **Fractal Image Compression (FIC
 fractal-image-compression/
 ├── fic/                          # Paket Inti Algoritma Fraktal
 │   ├── __init__.py
-│   ├── preprocessing.py          # Modul 1: Preprocessing & Partisi Blok (Mhs 1)
+│   ├── preprocessing.py          # Modul 1: Preprocessing & Partisi Blok (Aji)
 │   ├── transforms.py             # 8 Isometri Grup Dihedral D4
-│   ├── encoder.py                # Modul 2: Domain-Range Matching & Least Squares (Mhs 2)
-│   ├── decoder.py                # Modul 3: IFS Reconstruction & Attractor (Mhs 3)
+│   ├── encoder.py                # Modul 2: Domain-Range Matching & Least Squares (Aji)
+│   ├── decoder.py                # Modul 3: IFS Reconstruction & Attractor (Rayhan)
 │   ├── binary_format.py          # Serialisasi Biner .FIC (Header + Quantization)
-│   └── evaluation.py             # Modul 4: Metrik PSNR, SSIM, CR, Ablasi (Mhs 4)
+│   └── evaluation.py             # Modul 4: Metrik PSNR, SSIM, CR, Ablasi (Rayhan)
 ├── gui/                          # Antarmuka Pengguna Desktop
 │   ├── __init__.py
-│   └── app.py                    # Aplikasi Tkinter Modern Kanvas Ganda (Mhs 4)
+│   └── app.py                    # Aplikasi Tkinter Modern Kanvas Ganda (Rayhan)
 ├── report/                       # Laporan Capstone & Naskah Akademik
 │   ├── LAPORAN_CAPSTONE_FIC.md   # Laporan Capstone Lengkap (BAB I s/d BAB V)
 │   ├── main.tex                  # Naskah Ilmiah Format LaTeX Article (Academic Style)
@@ -56,14 +56,12 @@ fractal-image-compression/
 
 ---
 
-## 3. Pembagian Peran Tim (4 Mahasiswa)
+## 3. Pembagian Peran Tim (2 Mahasiswa)
 
-| No | Anggota | Modul Utama | Tanggung Jawab Rekayasa |
+| No | Anggota Tim | Modul Utama | Tanggung Jawab Rekayasa |
 |:---|:---|:---|:---|
-| 1 | **Mahasiswa 1** | `preprocessing.py` | Normalisasi grayscale, perataan dimensi, partisi range block non-overlapping, ekstraksi domain sliding window, subsampling rata-rata $2 \times 2$. |
-| 2 | **Mahasiswa 2** | `encoder.py`, `transforms.py` | Pembangkitan 8 isometri $D_4$, vektorisasi cross-covariance BLAS, optimasi least-squares untuk faktor skala $s$ dan offset $o$, seleksi pasangan MSE minimum. |
-| 3 | **Mahasiswa 3** | `decoder.py` | Mesin rekonstruksi iteratif IFS, penanganan kanvas awal ($I_0$), pelacakan delta konvergensi Teorema Banach. |
-| 4 | **Mahasiswa 4** | `gui/app.py`, `binary_format.py`, `evaluation.py`, `cli.py` | Perancangan format biner `.fic`, antarmuka grafis Tkinter, visualisasi metrik (PSNR, SSIM, CR), dan studi ablasi parameter. |
+| 1 | **Aji Kusuma Putra**<br/>`22/503701/PA/21657` | `fic/preprocessing.py`, `fic/encoder.py`, `fic/transforms.py` | Preprocessing citra, konversi grayscale, partisi range dan sliding domain blocks, pembangkitan 8 isometri dihedral D4, matriks kovariansi BLAS, dan least-squares matcher. |
+| 2 | **Rayhan Haldi Hermawan**<br/>`24/545406/PA/23176` | `fic/decoder.py`, `fic/binary_format.py`, `fic/evaluation.py`, `gui/app.py`, `cli.py` | Mesin decoding IFS teriterasi, inisialisasi kanvas, verifikasi konvergensi attractor, perancangan format biner .fic, evaluasi metrik (CR, PSNR, SSIM), GUI Tkinter, dan integrasi CLI. |
 
 ---
 

@@ -214,7 +214,7 @@ def build_pdf_report():
     ))
 
     story.append(Paragraph("3.3 Pembagian Tanggung Jawab Tim Pengembang", styles["SectionHeading"]))
-    story.append(Paragraph("Tabel 3.1: Matriks Pembagian Tugas Rekayasa Tim Capstone (4 Mahasiswa)", styles["TableCaption"]))
+    story.append(Paragraph("Tabel 3.1: Matriks Pembagian Tugas Rekayasa Tim Capstone (2 Mahasiswa)", styles["TableCaption"]))
 
     t3_data = [
         [
@@ -225,30 +225,18 @@ def build_pdf_report():
         ],
         [
             Paragraph("1", styles["TableCellCenter"]),
-            Paragraph("Mahasiswa 1", styles["TableCellLeft"]),
-            Paragraph("Preprocessing citra, konversi grayscale, partisi range dan sliding domain blocks.", styles["TableCellLeft"]),
-            Paragraph("fic/preprocessing.py", styles["TableCellCode"]),
+            Paragraph("Aji Kusuma Putra<br/><font size=7.5 color='#4A5568'>NIM: 22/503701/PA/21657</font>", styles["TableCellLeft"]),
+            Paragraph("Preprocessing citra, konversi grayscale, partisi range dan sliding domain blocks, pembangkitan 8 isometri dihedral D4, matriks kovariansi BLAS, dan least-squares matcher.", styles["TableCellLeft"]),
+            Paragraph("fic/preprocessing.py<br/>fic/encoder.py<br/>fic/transforms.py", styles["TableCellCode"]),
         ],
         [
             Paragraph("2", styles["TableCellCenter"]),
-            Paragraph("Mahasiswa 2", styles["TableCellLeft"]),
-            Paragraph("Pembangkitan 8 isometri dihedral D4, matriks kovariansi BLAS, least-squares matcher.", styles["TableCellLeft"]),
-            Paragraph("fic/encoder.py<br/>fic/transforms.py", styles["TableCellCode"]),
-        ],
-        [
-            Paragraph("3", styles["TableCellCenter"]),
-            Paragraph("Mahasiswa 3", styles["TableCellLeft"]),
-            Paragraph("Mesin decoding IFS teriterasi, inisialisasi kanvas, verifikasi konvergensi.", styles["TableCellLeft"]),
-            Paragraph("fic/decoder.py", styles["TableCellCode"]),
-        ],
-        [
-            Paragraph("4", styles["TableCellCenter"]),
-            Paragraph("Mahasiswa 4", styles["TableCellLeft"]),
-            Paragraph("Format biner .fic, evaluasi metrik (CR, PSNR, SSIM), GUI Tkinter, dan integrasi CLI.", styles["TableCellLeft"]),
-            Paragraph("fic/binary_format.py<br/>gui/app.py, cli.py", styles["TableCellCode"]),
+            Paragraph("Rayhan Haldi Hermawan<br/><font size=7.5 color='#4A5568'>NIM: 24/545406/PA/23176</font>", styles["TableCellLeft"]),
+            Paragraph("Mesin decoding IFS teriterasi, inisialisasi kanvas, verifikasi konvergensi attractor, perancangan format biner .fic, evaluasi metrik (CR, PSNR, SSIM), GUI Tkinter, dan integrasi CLI.", styles["TableCellLeft"]),
+            Paragraph("fic/decoder.py<br/>fic/binary_format.py<br/>fic/evaluation.py<br/>gui/app.py, cli.py", styles["TableCellCode"]),
         ],
     ]
-    t3_table = Table(t3_data, colWidths=[24, 76, 196, 100])
+    t3_table = Table(t3_data, colWidths=[24, 106, 166, 100])
     t3_table.setStyle(get_booktabs_style(len(t3_data)))
     story.append(t3_table)
     story.append(Spacer(1, 0.4 * cm))
